@@ -1,0 +1,18 @@
+@import 'reset/reset.scss'; // reset style
+// @import 'partials/index.scss';
+//Общие
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: $color-very-dark-blue;
+}
