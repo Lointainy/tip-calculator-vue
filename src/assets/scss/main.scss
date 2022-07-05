@@ -14,5 +14,17 @@ body {
 }
 
 body {
-  background-color: $color-very-dark-blue;
+  background-color: $color-light-cyan;
+  font-family: 'Space Mono', monospace;
+}
+
+// hidden arrow for input:number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }

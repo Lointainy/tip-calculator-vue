@@ -1,10 +1,23 @@
-// ## Colors
+/* Colors */
 
-$color-dark-blue: #2b3844;
-$color-very-dark-blue: #202c36;
-$color-dark-gray: #848484;
-$color-white: #ffffff;
-$color-shadow: rgba(0, 0, 0, 0.055);
+$color-light-cyan: hsl(185, 41%, 84%);
+$color-very-light-cyan: hsl(189, 41%, 97%);
+$color-very-dark-cyan: hsl(183, 100%, 15%);
+$color-dark-cyan: hsl(186, 14%, 43%);
+$color-strong-cyan: hsl(172, 67%, 45%);
+$color-white: hsl(0, 0%, 100%);
 
-// border
-$border-radius: 0.313rem;
+/* Border  */
+$border-radius: 1.625rem;
+$border-radius-button: 0.3125rem;
+
+// - Strong cyan: hsl(172, 67%, 45%)
+
+// ### Neutral
+
+// - Very dark cyan: hsl(183, 100%, 15%)
+// - Dark grayish cyan: hsl(186, 14%, 43%)
+// - Grayish cyan: hsl(184, 14%, 56%)
+// - Light grayish cyan: hsl(185, 41%, 84%)
+// - Very light grayish cyan: hsl(189, 41%, 97%)
+// - White: hsl(0, 0%, 100%)
