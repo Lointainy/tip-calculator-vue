@@ -41,13 +41,13 @@ props.total
 <style lang="scss">
 /* SUMMARY */
 .summary {
-  width: calc((100% / 2) - 1.5rem);
-  background-color: $color-very-dark-cyan;
-  padding: 2.5rem;
-  border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: calc((100% / 2) - 1.5rem);
+  padding: 2.5rem;
+  background-color: $color-very-dark-cyan;
+  border-radius: 1.5625rem;
 
   &__amount {
     display: flex;
@@ -57,17 +57,16 @@ props.total
 
     &-heading {
       .amount-title {
-        color: $color-white;
+        margin-bottom: 0.075rem;
         font-style: normal;
         font-weight: 700;
         font-size: 1rem;
-        margin-bottom: 0.075rem;
+        color: $color-white;
       }
 
       .amount-subtitle {
         font-weight: 700;
         font-size: 0.8125rem;
-
         color: #7f9d9f;
       }
     }
@@ -75,8 +74,8 @@ props.total
     &-number {
       font-weight: 700;
       font-size: 3rem;
-      letter-spacing: -0.0625rem;
       color: $color-strong-cyan;
+      letter-spacing: -0.0625rem;
     }
   }
 
@@ -88,11 +87,11 @@ props.total
 
     &-heading {
       .total-title {
-        color: $color-white;
+        margin-bottom: 0.075rem;
         font-style: normal;
         font-weight: 700;
         font-size: 1rem;
-        margin-bottom: 0.075rem;
+        color: $color-white;
       }
 
       .total-subtitle {
@@ -106,20 +105,20 @@ props.total
     &-number {
       font-weight: 700;
       font-size: 3rem;
-      letter-spacing: -0.0625rem;
       color: $color-strong-cyan;
+      letter-spacing: -0.0625rem;
     }
   }
 
   &__btn {
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: $color-very-dark-cyan;
-    background-color: $color-strong-cyan;
+    align-items: center;
+    height: 3rem;
     font-weight: 700;
     font-size: 1.25rem;
-    height: 3rem;
+    color: $color-very-dark-cyan;
+    background-color: $color-strong-cyan;
     border-radius: $border-radius-button;
     cursor: pointer;
   }

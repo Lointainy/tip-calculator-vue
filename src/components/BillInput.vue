@@ -20,38 +20,38 @@ const billValue = inject('bill')
 
   &__title {
     margin-bottom: 0.375rem;
-    color: $color-dark-cyan;
     font-style: normal;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
+    color: $color-dark-cyan;
   }
 
   &__input-container {
     position: relative;
-    height: 3rem;
     width: 100%;
+    height: 3rem;
   }
 
   &__input {
     width: 100%;
     height: 100%;
     padding-right: 1rem;
-    background-color: $color-very-light-cyan;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
     text-align: right;
     color: $color-very-dark-cyan;
+    background-color: $color-very-light-cyan;
   }
 
   &__input-icon {
     position: absolute;
-    left: 1rem;
     top: 0.75rem;
+    left: 1rem;
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    font-weight: 500;
     color: #9ebbbd;
   }
 }

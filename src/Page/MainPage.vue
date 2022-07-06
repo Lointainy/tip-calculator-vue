@@ -6,8 +6,6 @@
   </div>
 </template>
 <script setup>
-// TODO: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
-// https://web.dev/building-a-dialog-component/
 
 import { ref, provide, computed } from 'vue'
 
@@ -24,8 +22,6 @@ const isDataValid = (a, b, c) => (
   || c.value == 0
   ||a.value / b.value == Infinity
 )
-// const isOfNeededType = typeof b === 'number';
-// if (a === b || isOfNeededType)
 
 const amount = computed(() => {
   return isDataValid(bill, til, people)
@@ -45,24 +41,24 @@ const resetValue = () => {
   people.value = 0
 }
 
-provide(/* key */ 'bill', /* value */ bill)
-provide(/* key */ 'til', /* value */ til)
-provide(/* key */ 'people', /* value */ people)
+provide('bill', bill)
+provide('til', til)
+provide('people', people)
 </script>
 
 <style lang="scss">
 /* MAIN */
 .main {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 57.5rem;
-  height: 480px;
-  border-radius: $border-radius;
-  background-color: $color-white;
-  padding: 2rem;
+  left: 50%;
   display: flex;
   gap: 3rem;
+  width: 57.5rem;
+  height: 480px;
+  padding: 2rem;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  transform: translate(-50%, -50%);
 }
 </style>

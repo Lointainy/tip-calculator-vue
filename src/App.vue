@@ -6,5 +6,3 @@
 // Components
 import MainPage from '@/Page/MainPage.vue'
 </script>
-
-<style lang="scss"></style>
