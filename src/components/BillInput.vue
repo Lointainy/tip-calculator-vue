@@ -9,18 +9,9 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, computed } from 'vue'
+import { inject } from 'vue'
 
-const emit = defineEmits(['update:billValue'])
-
-const bill = ref(0)
-
-const billValue = computed({
-  get: () => bill.value,
-  set: (newValue) => {
-    emit('update:billValue', newValue)
-  },
-})
+const billValue = inject('bill')
 </script>
 <style lang="scss">
 /* bill */

@@ -9,16 +9,9 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, computed } from 'vue'
+import { inject } from 'vue'
 
-const emit = defineEmits(['update:peopleValue'])
-
-const numPeople = ref(0)
-
-const peopleValue = computed({
-  get: () => numPeople.value,
-  set: (newValue) => emit('update:peopleValue', newValue),
-})
+const peopleValue = inject('people')
 </script>
 
 <style lang="scss">

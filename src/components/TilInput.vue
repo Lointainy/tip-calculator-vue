@@ -3,18 +3,26 @@
     <div class="tip__title">Select Tip %</div>
     <div class="tip__list">
       <div v-for="(item, index) in tipPercentage" :key="index" class="tip__list-item">
-        <input class="tip__item-radio" type="radio" :id="`radio-percentage-${item}`" name="tip-percentage" />
+        <input
+          v-model="tilValue"
+          class="tip__item-radio"
+          type="radio"
+          :id="`radio-percentage-${item}`"
+          name="tip-percentage"
+          :value="item"
+        />
         <label class="tip__item-title" :for="`radio-percentage-${item}`">{{ item }}%</label>
       </div>
       <div class="tip__list-item">
-        <input class="tip__item-input" type="number" placeholder="custom" min="0" />
+        <input v-model="tilValue" class="tip__item-input" type="number" placeholder="custom" min="0" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
+const tilValue = inject('til')
 const tipPercentage = ref([5, 10, 15, 25, 50])
 </script>
 

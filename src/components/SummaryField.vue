@@ -5,20 +5,24 @@
         <div class="amount-title">Tip Amount</div>
         <div class="amount-subtitle">/ person</div>
       </div>
-      <div class="summary__amount-number">${{ amount }}</div>
+      <div class="summary__amount-number">${{ amount.toFixed(1) }}</div>
     </div>
     <div class="summary__total">
       <div class="summary__total-heading">
         <div class="total-title">Total</div>
         <div class="total-subtitle">/ person</div>
       </div>
-      <div class="summary__total-number">${{ total }}</div>
+      <div class="summary__total-number">${{ total.toFixed(1) }}</div>
     </div>
-    <div class="summary__btn">reset</div>
+    <div @click="handleReset" class="summary__btn">reset</div>
   </div>
 </template>
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
+
+const emit = defineEmits(['resetValue'])
+
+const handleReset = () => emit('resetValue')
 
 const props = defineProps({
   amount: {

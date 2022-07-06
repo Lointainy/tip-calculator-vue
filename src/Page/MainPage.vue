@@ -2,18 +2,52 @@
   <div class="main">
     <calculator-field />
     <!-- summary -->
-    <summary-field :total="total" :amount="amount" />
+    <summary-field @reset-value="resetValue" :total="total" :amount="amount" />
   </div>
 </template>
-
 <script setup>
-import { ref } from 'vue'
+// TODO: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+// https://web.dev/building-a-dialog-component/
+
+import { ref, provide, computed } from 'vue'
 
 import CalculatorField from '@/components/CalculatorField.vue'
 import SummaryField from '@/components/SummaryField.vue'
 
-const total = ref(0)
-const amount = ref(0)
+const bill = ref(0)
+const til = ref(0)
+const people = ref(0)
+
+const isDataValid = (a, b, c) => (
+  a.value == 0
+  || b.value == 0
+  || c.value == 0
+  ||a.value / b.value == Infinity
+)
+// const isOfNeededType = typeof b === 'number';
+// if (a === b || isOfNeededType)
+
+const amount = computed(() => {
+  return isDataValid(bill, til, people)
+    ? 0
+    : (bill.value * (til.value / 100)) / people.value
+})
+
+const total = computed(() => {
+  return isDataValid(bill, til, people)
+    ? 0
+    : bill.value / people.value + amount.value
+})
+
+const resetValue = () => {
+  bill.value = 0
+  til.value = 0
+  people.value = 0
+}
+
+provide(/* key */ 'bill', /* value */ bill)
+provide(/* key */ 'til', /* value */ til)
+provide(/* key */ 'people', /* value */ people)
 </script>
 
 <style lang="scss">
