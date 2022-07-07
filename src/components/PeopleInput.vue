@@ -2,7 +2,7 @@
   <div class="people">
     <div class="people__title">Number of People</div>
     <div class="people__input-container" for="bill">
-      <input v-model="peopleValue" class="people__input" name="bill" type="number" min="0" />
+      <input v-model="peopleValue" class="people__input" name="bill" type="number" min="0" placeholder="0" />
       <img src="@/assets/img/CombinedShape.svg" alt="" class="people__input-icon" />
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div class="bill">
     <h1 class="bill__title">Bill</h1>
     <div class="bill__input-container" for="bill">
-      <input v-model="billValue" class="bill__input" name="bill" type="number" min="0" />
+      <input v-model="billValue" class="bill__input" name="bill" type="number" min="0" placeholder="0" />
       <span class="bill__input-icon">$</span>
     </div>
   </div>

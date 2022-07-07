@@ -1,4 +1,9 @@
 <template>
+  <div class="logo">
+    spli
+    <br />
+    tter
+  </div>
   <div class="main">
     <calculator-field />
     <!-- summary -->
@@ -6,59 +11,65 @@
   </div>
 </template>
 <script setup>
-
 import { ref, provide, computed } from 'vue'
 
 import CalculatorField from '@/components/CalculatorField.vue'
 import SummaryField from '@/components/SummaryField.vue'
 
-const bill = ref(0)
-const til = ref(0)
-const people = ref(0)
+const bill = ref()
+const tip = ref()
+const people = ref()
 
-const isDataValid = (a, b, c) => (
-  a.value == 0
-  || b.value == 0
-  || c.value == 0
-  ||a.value / b.value == Infinity
-)
+const isDataValid = (a, b, c) =>
+  a.value == null || b.value == null || a.value == 0 || b.value == 0 || c.value == 0 || a.value / b.value == Infinity
 
 const amount = computed(() => {
-  return isDataValid(bill, til, people)
-    ? 0
-    : (bill.value * (til.value / 100)) / people.value
+  return isDataValid(bill, tip, people) ? 0 : (bill.value * (tip.value / 100)) / people.value
 })
 
 const total = computed(() => {
-  return isDataValid(bill, til, people)
-    ? 0
-    : bill.value / people.value + amount.value
+  return isDataValid(bill, tip, people) ? 0 : bill.value / people.value + amount.value
 })
 
 const resetValue = () => {
   bill.value = 0
-  til.value = 0
+  tip.value = 0
   people.value = 0
 }
 
 provide('bill', bill)
-provide('til', til)
+provide('tip', tip)
 provide('people', people)
 </script>
 
 <style lang="scss">
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #3d6666;
+  text-transform: uppercase;
+  letter-spacing: 0.625rem;
+}
 /* MAIN */
 .main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: flex;
-  gap: 3rem;
-  width: 57.5rem;
-  height: 480px;
+  @include container;
+  min-width: 57.5rem;
   padding: 2rem;
   background-color: $color-white;
   border-radius: $border-radius;
-  transform: translate(-50%, -50%);
+  gap: 3rem;
+
+  @include media(lg, mx) {
+    flex-wrap: wrap;
+    min-width: 0;
+    width: 100%;
+  }
 }
 </style>

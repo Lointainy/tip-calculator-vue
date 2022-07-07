@@ -4,7 +4,7 @@
     <bill-input />
 
     <!-- select tip -->
-    <til-input />
+    <tip-input />
 
     <!-- number of people -->
     <people-input />
@@ -13,7 +13,7 @@
 
 <script setup>
 import BillInput from './BillInput.vue'
-import TilInput from './TilInput.vue'
+import TipInput from './TipInput.vue'
 import PeopleInput from './PeopleInput.vue'
 </script>
 
@@ -21,5 +21,9 @@ import PeopleInput from './PeopleInput.vue'
 /* CALCULATOR */
 .calculator-field {
   width: calc((100% / 2) - 1.5rem);
+
+  @include media(lg, mx){
+    width: 100%;
+  }
 }
 </style>

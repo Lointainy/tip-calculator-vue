@@ -1,20 +1,20 @@
 <template>
-  <div class="summary">
-    <div class="summary__amount">
-      <div class="summary__amount-heading">
+  <div class="summary-field">
+    <div class="summary-field__amount">
+      <div class="summary-field__amount-heading">
         <div class="amount-title">Tip Amount</div>
         <div class="amount-subtitle">/ person</div>
       </div>
-      <div class="summary__amount-number">${{ amount.toFixed(1) }}</div>
+      <div class="summary-field__amount-number">${{ amount.toFixed(1) }}</div>
     </div>
-    <div class="summary__total">
-      <div class="summary__total-heading">
+    <div class="summary-field__total">
+      <div class="summary-field__total-heading">
         <div class="total-title">Total</div>
         <div class="total-subtitle">/ person</div>
       </div>
-      <div class="summary__total-number">${{ total.toFixed(1) }}</div>
+      <div class="summary-field__total-number">${{ total.toFixed(1) }}</div>
     </div>
-    <div @click="handleReset" class="summary__btn">reset</div>
+    <div @click="handleReset" class="summary-field__btn">reset</div>
   </div>
 </template>
 <script setup>
@@ -39,8 +39,8 @@ props.amount
 props.total
 </script>
 <style lang="scss">
-/* SUMMARY */
-.summary {
+/* summary-field */
+.summary-field {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,13 +49,22 @@ props.total
   background-color: $color-very-dark-cyan;
   border-radius: 1.5625rem;
 
+  @include media(lg, mx) {
+    width: 100%;
+  }
+
   &__amount {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3.125rem;
 
     &-heading {
+      @include mediaWidth(400px, mx) {
+        width: 100%;
+      }
+
       .amount-title {
         margin-bottom: 0.075rem;
         font-style: normal;
@@ -81,11 +90,16 @@ props.total
 
   &__total {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3.125rem;
 
     &-heading {
+      @include mediaWidth(400px, mx) {
+        width: 100%;
+      }
+
       .total-title {
         margin-bottom: 0.075rem;
         font-style: normal;
