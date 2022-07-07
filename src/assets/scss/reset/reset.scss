@@ -21,6 +21,7 @@ time, mark, audio, video {
 // Links
 a {
   text-decoration: none;
+
   &:active, &:hover {
     outline: 0;
   }
@@ -28,17 +29,17 @@ a {
 
 // List
 ul, li {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 // Headlines
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
 
 // Default
 html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 :focus { outline: 0; }
 
 img, audio, video { max-width: 100%; height: auto; }
@@ -47,14 +48,14 @@ iframe { border: 0 }
 
 // From
 textarea {
-  resize: none; /*remove the resize handle on the bottom right*/
   overflow: auto;
   vertical-align: top;
-  box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none; /*remove the resize handle on the bottom right*/
 }
-input, textarea, select, button { outline: none; border: none; font-size: 100%; margin: 0;}
+input, textarea, select, button { margin: 0; font-size: 100%; border: none; outline: none;}
 button, input { line-height: normal; }
 
 // Table

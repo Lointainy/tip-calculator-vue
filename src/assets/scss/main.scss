@@ -1,6 +1,6 @@
-@import 'reset/reset.scss'; // reset style
-// @import 'partials/index.scss';
-//Общие
+@import 'reset/reset'; // reset style
+
+// basic
 
 *,
 *::before,
@@ -14,15 +14,15 @@ body {
 }
 
 body {
-  background-color: $color-light-cyan;
   font-family: 'Space Mono', monospace;
+  background-color: $color-light-cyan;
 }
 
 // hidden arrow for input:number
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  -webkit-appearance: none;
 }
 
 input[type='number'] {

@@ -1,7 +1,7 @@
 //Base style for container
 @mixin container {
-  margin: 0 auto;
   max-width: $container-mw + $grid-space;
+  margin: 0 auto;
   padding: 0 $grid-space-side;
   // background-color: #aaa;
 }
