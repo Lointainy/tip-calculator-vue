@@ -1,8 +1,18 @@
 <template>
   <div class="people">
-    <div class="people__title">Number of People</div>
+    <div class="people__title">
+      Number of People<span v-if="peopleValue == 0" class="error-title">Can’t be zero</span>
+    </div>
     <div class="people__input-container" for="bill">
-      <input v-model="peopleValue" class="people__input" name="bill" type="number" min="0" placeholder="0" />
+      <input
+        :class="peopleValue == 0 ? 'error-input' : ''"
+        v-model="peopleValue"
+        class="people__input"
+        name="bill"
+        type="number"
+        min="0"
+        placeholder="0"
+      />
       <img src="@/assets/img/CombinedShape.svg" alt="" class="people__input-icon" />
     </div>
   </div>
@@ -20,12 +30,14 @@ const peopleValue = inject('people')
   margin-bottom: 2.5rem;
 
   &__title {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 0.375rem;
     font-style: normal;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: $color-dark-cyan;
+    color: $color-wintergreen-dream;
   }
 
   &__input-container {
@@ -42,8 +54,17 @@ const peopleValue = inject('people')
     font-weight: 700;
     font-size: 1.5rem;
     text-align: right;
-    color: $color-very-dark-cyan;
-    background-color: $color-very-light-cyan;
+    color: $color-deep-jungle-green;
+    background-color: $color-alice-blue;
+    border-radius: $border-radius-button;
+
+    &:focus {
+      outline: 0.125rem $color-light-sea-green solid;
+    }
+
+    &::placeholder {
+      color: $color-dark-electric-blue;
+    }
   }
 
   &__input-icon {

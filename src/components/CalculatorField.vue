@@ -20,9 +20,9 @@ import PeopleInput from './PeopleInput.vue'
 <style lang="scss">
 /* CALCULATOR */
 .calculator-field {
-  width: calc((100% / 2) - 1.5rem);
+  width: $column-width;
 
-  @include media(lg, mx){
+  @include media(lg, mx) {
     width: 100%;
   }
 }

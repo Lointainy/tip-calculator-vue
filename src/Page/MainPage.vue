@@ -10,6 +10,7 @@
     <summary-field @reset-value="resetValue" :total="total" :amount="amount" />
   </div>
 </template>
+
 <script setup>
 import { ref, provide, computed } from 'vue'
 
@@ -21,7 +22,13 @@ const tip = ref()
 const people = ref()
 
 const isDataValid = (a, b, c) =>
-  a.value == null || b.value == null || a.value == 0 || b.value == 0 || c.value == 0 || a.value / b.value == Infinity
+  a.value == null ||
+  b.value == null ||
+  c.value == null ||
+  a.value == 0 ||
+  b.value == 0 ||
+  c.value == 0 ||
+  a.value / b.value == Infinity
 
 const amount = computed(() => {
   return isDataValid(bill, tip, people) ? 0 : (bill.value * (tip.value / 100)) / people.value
@@ -32,9 +39,9 @@ const total = computed(() => {
 })
 
 const resetValue = () => {
-  bill.value = 0
-  tip.value = 0
-  people.value = 0
+  bill.value = ''
+  tip.value = ''
+  people.value = ''
 }
 
 provide('bill', bill)
@@ -52,7 +59,7 @@ provide('people', people)
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2.25rem;
-  color: #3d6666;
+  color: $color-deep-space-sparkle;
   text-transform: uppercase;
   letter-spacing: 0.625rem;
 }
