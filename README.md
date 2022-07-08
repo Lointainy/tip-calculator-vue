@@ -3,6 +3,7 @@
 ## Table of contents
 
 - [Overview](#overview)
+  - [Preview](https://tip-calculator-lointainy.netlify.app/)
   - [Description](#description)
 - [My process](#my-process)
   - [Built with](#built-with)
