@@ -77,6 +77,7 @@ provide('people', people)
     flex-wrap: wrap;
     min-width: 0;
     width: 100%;
+    gap: 0;
   }
 }
 </style>
