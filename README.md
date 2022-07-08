@@ -23,16 +23,16 @@ Your [challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJ
 
 ###### Built with
 
-- HTML
-- CSS / SCSS
-- Flexbox
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 - Node modules
-  - eslint
-  - prettier
-  - stylelint
-  - sass
-  - fontsource
-- [Vue3](https://vuejs.org/) - framework
+  - [eslint](https://eslint.org/)
+  - [prettier](https://prettier.io/)
+  - [stylelint](https://stylelint.io/)
+  - [sass](https://sass-lang.com/)
+  - [fontsource](https://fontsource.org/docs/getting-started)
+- [Vue3](https://vuejs.org/) - framework / composition api
 - [Vite](https://vitejs.dev/) - module bundler
 
 ###### What i learned
