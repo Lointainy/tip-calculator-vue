@@ -1,5 +1,12 @@
+// BASE
 @import 'variables';
-@import 'mixin';
-@import 'classes'; // if you no need CSS classes system comment this string
+@import 'mixin'; // Media query mixin
 
-// default
+// OTHER
+
+/* can be excluded if you do not need  */
+
+@import './components/mixin-container'; //container include
+// @import './components/mixin-row'; //row include
+// @import './components/mixin-col'; // /container include
+// @import './components/classes'; //css style for html markup
