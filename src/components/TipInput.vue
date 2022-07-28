@@ -37,7 +37,7 @@ const tipPercentage = ref([5, 10, 15, 25, 50])
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: $color-dark-cyan;
+    color: $color-wintergreen-dream;
   }
 
   &__list {
@@ -52,10 +52,11 @@ const tipPercentage = ref([5, 10, 15, 25, 50])
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: calc((100% / 3) - 2rem);
+      @include item-width(3, 2rem);
       height: 3rem;
 
       @include media(sm, mx) {
-        flex-basis: calc((100% / 2) - 2rem);
+        @include item-width(2, 2rem);
       }
     }
   }
@@ -70,9 +71,14 @@ const tipPercentage = ref([5, 10, 15, 25, 50])
     font-weight: 700;
     font-size: 1.5rem;
     color: $color-white;
-    background-color: $color-very-dark-cyan;
+    background-color: $color-deep-jungle-green;
     border-radius: $border-radius-button;
     cursor: pointer;
+    transition: $transition-background;
+
+    &:hover {
+      background-color: $color-crystal;
+    }
   }
 
   &__item-radio {
@@ -80,7 +86,7 @@ const tipPercentage = ref([5, 10, 15, 25, 50])
     display: none;
 
     &:checked + .tip__item-title {
-      background-color: $color-strong-cyan;
+      background-color: $color-light-sea-green;
     }
   }
 
@@ -91,9 +97,18 @@ const tipPercentage = ref([5, 10, 15, 25, 50])
     font-size: 1.5rem;
     line-height: 2.25rem;
     text-align: center;
-    color: #547878;
-    background-color: $color-very-light-cyan;
+    color: $color-deep-jungle-green;
+    background-color: $color-alice-blue;
     border-radius: $border-radius-button;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0.125rem $color-light-sea-green solid;
+    }
+
+    &::placeholder {
+      color: $color-dark-electric-blue;
+    }
   }
 }
 </style>

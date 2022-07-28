@@ -1,34 +1,3 @@
-//Base style for container
-@mixin container {
-  max-width: $container-mw + $grid-space;
-  margin: 0 auto;
-  padding: 0 $grid-space-side;
-  // background-color: #aaa;
-}
-
-@mixin container-width($value) {
-  $value: map-get($container-value, $value);
-  max-width: $value;
-} // container width
-
-//Base style for row
-@mixin row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 (-$grid-space-side);
-}
-
-// Base style for all columns
-@mixin col($size) {
-  flex: 0 0 auto;
-  width: calc(#{percentage(math.div($size, $grid-columns))} - #{$grid-space});
-  margin: 0 $grid-space-side;
-}
-
-@mixin offset($size) {
-  margin-left: calc((#{percentage(math.div($size, $grid-columns))} - #{$grid-space}) + ((#{$grid-space-side}) * 3));
-} // offset for columns
-
 //Custom media query
 @mixin mediaWidth($width, $value) {
   $value: map-get($media-value, $value);

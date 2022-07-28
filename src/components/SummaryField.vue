@@ -14,11 +14,12 @@
       </div>
       <div class="summary-field__total-number">${{ total.toFixed(1) }}</div>
     </div>
-    <div @click="handleReset" class="summary-field__btn">reset</div>
+    <button :disabled="isDisabled" @click="handleReset" class="summary-field__btn">reset</button>
   </div>
 </template>
+
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, computed } from 'vue'
 
 const emit = defineEmits(['resetValue'])
 
@@ -35,8 +36,7 @@ const props = defineProps({
   },
 })
 
-props.amount
-props.total
+const isDisabled = computed(() => props.amount <= 0 || props.total <= 0)
 </script>
 <style lang="scss">
 /* summary-field */
@@ -44,9 +44,9 @@ props.total
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc((100% / 2) - 1.5rem);
+  width: $column-width;
   padding: 2.5rem;
-  background-color: $color-very-dark-cyan;
+  background-color: $color-deep-jungle-green;
   border-radius: 1.5625rem;
 
   @include media(lg, mx) {
@@ -76,14 +76,14 @@ props.total
       .amount-subtitle {
         font-weight: 700;
         font-size: 0.8125rem;
-        color: #7f9d9f;
+        color: $color-weldon-blue;
       }
     }
 
     &-number {
       font-weight: 700;
       font-size: 3rem;
-      color: $color-strong-cyan;
+      color: $color-light-sea-green;
       letter-spacing: -0.0625rem;
     }
   }
@@ -112,14 +112,14 @@ props.total
         font-weight: 700;
         font-size: 0.8125rem;
 
-        color: #7f9d9f;
+        color: $color-weldon-blue;
       }
     }
 
     &-number {
       font-weight: 700;
       font-size: 3rem;
-      color: $color-strong-cyan;
+      color: $color-light-sea-green;
       letter-spacing: -0.0625rem;
     }
   }
@@ -131,10 +131,21 @@ props.total
     height: 3rem;
     font-weight: 700;
     font-size: 1.25rem;
-    color: $color-very-dark-cyan;
-    background-color: $color-strong-cyan;
+    color: $color-deep-jungle-green;
+    text-transform: uppercase;
+    background-color: $color-light-sea-green;
     border-radius: $border-radius-button;
     cursor: pointer;
+    transition: $transition-background;
+
+    &:hover {
+      background-color: $color-crystal;
+    }
+
+    &:disabled {
+      background-color: $color-skobeloff;
+      cursor: default;
+    }
   }
 }
 </style>

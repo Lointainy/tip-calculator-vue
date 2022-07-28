@@ -1,23 +1,46 @@
 /* Colors */
 
-$color-light-cyan: hsl(185, 41%, 84%);
-$color-very-light-cyan: hsl(189, 41%, 97%);
-$color-very-dark-cyan: hsl(183, 100%, 15%);
-$color-dark-cyan: hsl(186, 14%, 43%);
-$color-strong-cyan: hsl(172, 67%, 45%);
-$color-white: hsl(0, 0%, 100%);
+$color-white: #ffffff;
+//subtitle color
+$color-weldon-blue: #7f9d9f;
+//icon color
+$color-opal: #9ebbbd;
+//input, btn font color; field background
+$color-deep-jungle-green: #00474b;
+//placegolder input color
+$color-dark-electric-blue: #547878;
+//title
+$color-wintergreen-dream: #5e7a7d;
+//input
+$color-alice-blue: #f3f9fa;
+//background
+$color-columbia-blue: #c5e4e7;
+//logo
+$color-deep-space-sparkle: #3d6666;
+//active - focus - btn color
+$color-light-sea-green: #26c2ae;
+//hover color
+$color-crystal: #9fe8df;
+//disabled color
+$color-skobeloff: #0d686d;
+//error color
+$color-burnt-sienna: #e17052;
 
 /* Border  */
+
 $border-radius: 1.625rem;
 $border-radius-button: 0.3125rem;
 
-// - Strong cyan: hsl(172, 67%, 45%)
+/* other */
 
-// ### Neutral
+$transition-background: background-color ease-in 0.2s;
 
-// - Very dark cyan: hsl(183, 100%, 15%)
-// - Dark grayish cyan: hsl(186, 14%, 43%)
-// - Grayish cyan: hsl(184, 14%, 56%)
-// - Light grayish cyan: hsl(185, 41%, 84%)
-// - Very light grayish cyan: hsl(189, 41%, 97%)
-// - White: hsl(0, 0%, 100%)
+// for the main field elements
+$column-count: 2;
+$column-gap: 1.5rem;
+$column-width: calc((100% / $column-count) - $column-gap);
+
+//for the til input:radio
+@mixin item-width($item-count, $item-gap) {
+  flex-basis: calc((100% / $item-count) - $item-gap);
+}

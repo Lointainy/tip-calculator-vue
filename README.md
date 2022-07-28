@@ -1,7 +1,58 @@
-# Vue 3 + Vite
+# Frontend Mentor - Tip calculator app
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Table of contents
 
-## Recommended IDE Setup
+- [Overview](#overview)
+  - [Preview](https://tip-calculator-vue-lointainy.netlify.app/)
+  - [Description](#description)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Status](#project-status)
+- [Author](#author)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Overview
+
+![screenshot](./design/desktop-preview.jpg)
+
+###### Description:
+
+Your [challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX) is to build out this tip calculator app and get it looking as close to the design as possible.
+
+## My process
+
+###### Built with
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- Node modules
+  - [eslint](https://eslint.org/)
+  - [prettier](https://prettier.io/)
+  - [stylelint](https://stylelint.io/)
+  - [sass](https://sass-lang.com/)
+  - [fontsource](https://fontsource.org/docs/getting-started)
+- [Vue3](https://vuejs.org/) - framework / composition api
+- [Vite](https://vitejs.dev/) - module bundler
+
+###### What i learned
+
+- Vue 3 `Composition api`
+  - Page / components
+  - Ref
+  - Props
+  - Emit
+  - Provide / inject
+- Vite
+  - create basic config
+  - connect assets
+
+###### Project status
+
+![complete](https://img.shields.io/badge/project_created:-01.07.2022-333?style=for-the-badge&labelColor=e7901f)
+
+![update](https://img.shields.io/badge/last_update:-08.07.22-333?style=for-the-badge&labelColor=1fe783)
+
+###### Author
+
+[![Lointainy](https://img.shields.io/badge/-lointainy-333?style=for-the-badge&logo=github&&logoColor=FFF)](https://github.com/Lointainy)
