@@ -76,8 +76,11 @@ provide('people', people)
   @include media(lg, mx) {
     flex-wrap: wrap;
     min-width: 0;
-    width: 100%;
     gap: 0;
+  }
+
+  @include media(sm, mx) {
+    margin: 0;
   }
 }
 </style>
